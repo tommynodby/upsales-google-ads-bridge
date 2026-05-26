@@ -1,0 +1,22 @@
+{
+  "name": "upsales-google-ads-bridge",
+  "version": "1.0.0",
+  "description": "Receives Upsales appointment webhook, posts Enhanced Conversion for Leads to Google Ads",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod",
+    "generate-refresh-token": "node scripts/generate-refresh-token.js",
+    "test-local": "node scripts/test-webhook.js"
+  },
+  "dependencies": {
+    "google-ads-api": "^17.1.0"
+  },
+  "devDependencies": {
+    "vercel": "^54.4.1"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/upsales-webhook.js": {
+      "maxDuration": 30
+    }
+  }
+}
