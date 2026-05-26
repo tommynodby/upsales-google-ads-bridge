@@ -131,13 +131,12 @@ export default async function handler(req, res) {
 
   // Upload click conversion (Enhanced Conversions for Leads format)
   try {
-    const response = await customer.conversionUploads.uploadClickConversions(
-      [conversion],
-      {
-        partial_failure: true,
-        validate_only: process.env.VALIDATE_ONLY === 'true', // set to true for dry-run
-      }
-    );
+    const response = await customer.conversionUploads.uploadClickConversions({
+      customer_id: process.env.GOOGLE_ADS_CUSTOMER_ID,
+      conversions: [conversion],
+      partial_failure: true,
+      validate_only: process.env.VALIDATE_ONLY === 'true', // dry-run flag
+    });
 
     // Check for partial failures
     if (response?.partial_failure_error) {
