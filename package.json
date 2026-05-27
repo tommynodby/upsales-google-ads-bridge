@@ -14,7 +14,7 @@
     "test-local": "node scripts/test-webhook.js"
   },
   "dependencies": {
-    "google-ads-api": "latest"
+    "google-ads-api": "^23.0.0"
   },
   "devDependencies": {
     "vercel": "^54.4.1"
